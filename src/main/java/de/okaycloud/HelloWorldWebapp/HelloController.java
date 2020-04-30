@@ -11,9 +11,7 @@ public class HelloController {
 
 	@RequestMapping("/")
 	public String index() {
-		Random rand = new Random(); 
-		int rand_int1 = rand.nextInt(100); 
-		return "Die Helga ("+rand_int1+ " Jahre), die mag ich sehr.!";
+		return "This is the HelloWorld Webapp for the Continuous Deploment Tutorial";
 	}
 
 }
