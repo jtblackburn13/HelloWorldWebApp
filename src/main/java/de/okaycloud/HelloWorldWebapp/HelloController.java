@@ -1,18 +1,16 @@
 package de.okaycloud.HelloWorldWebapp;
 
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import java.util.Random; 
+import org.springframework.ui.Model;
 
-
-@RestController
+@Controller
 public class HelloController {
 
-	@RequestMapping("/")
-	public String index() {
-		return "This is the HelloWorld Webapp for the Continuous Deploment Tutorial";
+	@GetMapping("/greeting")
+	public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+		model.addAttribute("name", name);
+		return "greeting";
 	}
-
 }
-
