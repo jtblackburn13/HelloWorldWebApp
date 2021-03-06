@@ -2,7 +2,7 @@ FROM adoptopenjdk/openjdk8:alpine-slim
 
 ENV APP_NAME helloWorldWebApp
 
-LABEL maintainer="Marc Logemann"
+LABEL maintainer="Tyler Blackburn"
 RUN apk update
 
 # install tini
